@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+function sayHello() {
+  console.log("dupa log");
+};
+
 function App() {
   return (
     <div className="App">
@@ -9,6 +13,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>dupa</p>
+        <button onClick={sayHello}>Some buttton</button>
         <a
           className="App-link"
           href="https://reactjs.org"
