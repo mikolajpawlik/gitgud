@@ -3,12 +3,13 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
-    "@mui/material": "latest",
     "@mui/lab": "latest",
+    "@mui/material": "latest",
     "@mui/styled-engine-sc": "latest",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",
+    "cypress": "^9.5.3",
     "react": "latest",
     "react-dom": "latest",
     "react-scripts": "latest",
@@ -18,7 +19,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress": "cypress open"
   },
   "browserslist": {
     "production": [
