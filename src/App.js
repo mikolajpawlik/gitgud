@@ -1,16 +1,38 @@
-import './App.css';
-import {Button} from '@material-ui/core'; //importing material ui component
-import {TextField} from '@material-ui/core';
-import SomeHeader from './NavBar.js';
+import * as React from 'react';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import ProTip from './ProTip';
+import Button from '@mui/material/Button';
+import BasicTable from './BasicTable';
 
-function App() {
+function Copyright() {
   return (
-    <div className="App">
-      <SomeHeader/>
-      <TextField id="name" label="Name" variant="outlined" />
-      <Button color="primary" variant="contained"> Press me </Button>
-    </div>
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}.
+    </Typography>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Container maxWidth="sm">
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Create React App example with styled-components
+        </Typography>
+        <ProTip />
+        <Copyright />
+        <Button variant="text">Text</Button>
+        <Button variant="contained">Contained</Button>
+        <Button variant="outlined">Outlined</Button>
+      </Box>
+      <BasicTable></BasicTable>
+    </Container>
+  );
+}
